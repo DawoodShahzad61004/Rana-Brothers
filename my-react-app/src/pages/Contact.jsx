@@ -280,7 +280,26 @@ function Contact() {
               <dl className="mt-3 space-y-1.5 text-sm text-slate-700">
                 <div className="flex gap-2">
                   <dt className="w-16 font-semibold">Phone</dt>
-                  <dd>{contactInfo.phone}</dd>
+                  <dd className="space-y-1">
+                    <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+                      <span className="font-semibold text-slate-900">Rana Imran</span>
+                      <a
+                        href={`tel:${contactInfo.phone}`}
+                        className="font-medium text-emerald-800 hover:text-emerald-900"
+                      >
+                        {contactInfo.phone}
+                      </a>
+                    </div>
+                    <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+                      <span className="font-semibold text-slate-900">Azmat Hussain</span>
+                      <a
+                        href="tel:03003304300"
+                        className="font-medium text-emerald-800 hover:text-emerald-900"
+                      >
+                        03003304300
+                      </a>
+                    </div>
+                  </dd>
                 </div>
                 <div className="flex gap-2">
                   <dt className="w-16 font-semibold">PTCL</dt>
@@ -306,11 +325,15 @@ function Contact() {
                   <span className="font-semibold">Facebook:</span> link placeholder
                 </li>
                 <li>
-                  <span className="font-semibold">WhatsApp:</span> chat link placeholder
-                </li>
-                <li>
-                  <span className="font-semibold">WhatsApp Business:</span>{' '}
-                  company with company&apos;s logo
+                  <span className="font-semibold">WhatsApp:</span>{' '}
+                  <a
+                    href={`https://wa.me/${contactInfo.whatsappNumberInternational}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-emerald-700 hover:text-emerald-900"
+                  >
+                    Start WhatsApp chat
+                  </a>
                 </li>
               </ul>
             </div>

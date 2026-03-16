@@ -38,8 +38,26 @@ function Footer() {
               Contact
             </h3>
             <ul className="mt-3 space-y-1.5 text-slate-600">
-              <li>
-                <span className="font-semibold">Phone:</span> {contactInfo.phone}
+              <li className="space-y-0.5">
+                <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
+                  <span className="font-semibold">Phone:</span>
+                  <span className="font-semibold text-slate-900">Rana Imran</span>
+                  <a
+                    href={`tel:${contactInfo.phone}`}
+                    className="font-medium text-emerald-800 hover:text-emerald-900"
+                  >
+                    {contactInfo.phone}
+                  </a>
+                </div>
+                <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 pl-[3.15rem]">
+                  <span className="font-semibold text-slate-900">Azmat Hussain</span>
+                  <a
+                    href="tel:03003304300"
+                    className="font-medium text-emerald-800 hover:text-emerald-900"
+                  >
+                    03003304300
+                  </a>
+                </div>
               </li>
               <li>
                 <span className="font-semibold">PTCL:</span> {contactInfo.ptcl}

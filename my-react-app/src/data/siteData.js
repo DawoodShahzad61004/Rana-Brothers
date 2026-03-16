@@ -1,3 +1,18 @@
+import appleImage from '../assets/apple.jpeg'
+import bananaImage from '../assets/banana.jpg'
+import garlicImage from '../assets/garlic.jpeg'
+import gingerImage from '../assets/ginger.jpeg'
+import mangoImage from '../assets/mango.jpg'
+import melonsImage from '../assets/melons.jpeg'
+import onionImage from '../assets/onion.jpeg'
+import orangesImage from '../assets/oranges.jpg'
+import potatoesImage from '../assets/potatoes.jpeg'
+import tomatoesImage from '../assets/Tomatoes.jpeg'
+import logoImage from '../assets/logo.jpeg'
+import priceControlImage from '../assets/Member.jpeg'
+import anjamanImage from '../assets/General Secretary.jpeg'
+import coConvenerImage from '../assets/Co-Convener.jpeg'
+
 export const branding = {
   primaryName: 'Rana Brothers',
   alternateName: 'Imran Flour Mill',
@@ -26,9 +41,9 @@ export const navigation = {
 export const contactInfo = {
   phone: '03018424686',
   ptcl: '04237701368',
-  address: 'Shop no 23 sabzi mandi badami bagh ravi link road lahore',
+  address: 'Shop# 23 Sabzi Mandi Badami Bagh, Ravi Link Road, Lahore',
   email: 'ranabrothers323@gmail.com',
-  whatsappNumberInternational: '923018424686',
+  whatsappNumberInternational: '+923018424686',
 }
 
 export const homeContent = {
@@ -36,7 +51,7 @@ export const homeContent = {
     heading: 'Rana Brothers',
     subheading: '20 years of excellence',
     description:
-      'Commission-based agri-supply business, importer/exporter, wholesale traders dedicated to reliable fruits and vegetables supply.',
+      'Commission-based Agri-supply Business, Importer/Exporter, Wholesale Traders Dedicated to Reliable Fruits and Vegetables Supply.',
   },
   credibility: [
     {
@@ -61,14 +76,8 @@ export const homeContent = {
     body:
       'To be a trusted bridge between growers, local markets, and international buyers by delivering fresh, safe, and fairly traded agricultural produce. Rana Brothers aims to expand Pakistan’s fruits and vegetables footprint worldwide through transparent commission-based trading, disciplined logistics, and long-term relationships with our partners.',
   },
-  mottos: [
-    'Integrity in every transaction',
-    'Farmer and buyer centric approach',
-    'On-time, market-aligned deliveries',
-    'Consistent quality and grading',
-    'Transparent commission structure',
-    'Long-term relationships over short-term gains',
-  ],
+  mottos:
+    'Integrity in every transaction, a farmer- and buyer-centric approach, on-time market-aligned deliveries, consistent quality and grading, a transparent commission structure, and long-term relationships over short-term gains.',
   testimonials: [
     {
       name: 'Wholesale Partner – Lahore',
@@ -99,7 +108,7 @@ export const leadership = {
     title: 'About Us',
     subtitle: 'Based on combined interviews and field experience',
     body:
-      'Built on years of hands-on market experience and guidance from senior family members (Chachu), Rana Brothers has developed a deep understanding of pricing, demand cycles, and quality expectations. These insights have been collected through interviews, daily mandi exposure, and continuous interaction with growers, agents, and buyers.',
+      'Built on years of hands-on market experience, Rana Brothers has developed a deep understanding of pricing, demand cycles, and quality expectations. These insights have been collected through interviews, daily mandi exposure, and continuous interaction with growers, agents, and buyers.',
     interviewNote:
       'This profile reflects combined interviews and observations from Sabzi Mandi Badami Bagh and surrounding markets, capturing how the team approaches negotiations, dispute resolution, and long-term customer service.',
   },
@@ -107,25 +116,28 @@ export const leadership = {
 
 export const proofSections = [
   {
-    title: 'Member – Price Control Council',
-    subtitle: 'Management Department, Govt. of Punjab',
+    title: 'Member Punjab – Price Control Council',
+    subtitle: 'Management Department, Government of Punjab',
     description:
       'Representation within the Price Control Council highlights our active role in supporting fair pricing and responsible market practices.',
-    imageAlt: 'Highlight of first page membership proof placeholder',
+    imageSrc: priceControlImage,
+    imageAlt: 'Membership proof for the Punjab Price Control Council',
   },
   {
     title: 'General Secretary – Anjaman Aahrtiaan (Regd)',
-    subtitle: 'Sabzi Mandi Badami Bagh Link Ravi Road Lahore',
+    subtitle: 'Sabzi Mandi Badami Bagh, Ravi Link Road, Lahore',
     description:
       'Leadership responsibilities within Anjaman Aahrtiaan (Regd) at Vegetable Market Badami Bagh underline our connection with local stakeholders.',
-    imageAlt: 'General Secretary information placeholder',
+    imageSrc: anjamanImage,
+    imageAlt: 'General Secretary proof for Anjaman Aahrtiaan (Regd)',
   },
   {
     title: 'Co-Convener – Trade & Market Coordination',
-    subtitle: 'Certificate proof placeholder',
+    subtitle: 'Certificate Proof of Trade & Market Coordination',
     description:
       'Co-Convener certification demonstrates our involvement in coordinating traders, commission agents, and regulatory bodies.',
-    imageAlt: 'Co-Convener certificate placeholder',
+    imageSrc: coConvenerImage,
+    imageAlt: 'Co-Convener certificate for Trade & Market Coordination',
   },
 ]
 
@@ -135,6 +147,8 @@ export const products = {
       id: 'apple',
       name: 'Apple',
       category: 'Fruits',
+      imageSrc: appleImage,
+      imageAlt: 'Fresh apples',
       variety: 'Selected table varieties',
       grade: 'Export / Local market grade',
       packaging: '10–20 kg cartons (as per buyer requirement)',
@@ -144,6 +158,8 @@ export const products = {
       id: 'mango',
       name: 'Mango',
       category: 'Fruits',
+      imageSrc: mangoImage,
+      imageAlt: 'Mangoes',
       variety: 'Sindhri, Chaunsa and other export varieties',
       grade: 'Export quality with grading options',
       packaging: 'Standard export cartons with protective packing',
@@ -153,6 +169,8 @@ export const products = {
       id: 'melon',
       name: 'Melon',
       category: 'Fruits',
+      imageSrc: melonsImage,
+      imageAlt: 'Melons',
       variety: 'Local and export-accepted types',
       grade: 'Market-selected for size and sweetness',
       packaging: 'Loose loading or carton packing',
@@ -162,6 +180,8 @@ export const products = {
       id: 'banana',
       name: 'Banana',
       category: 'Fruits',
+      imageSrc: bananaImage,
+      imageAlt: 'Bananas',
       variety: 'Handled in ripening and green stages',
       grade: 'Wholesale grading for different markets',
       packaging: 'Cartons or bunch handling as required',
@@ -171,6 +191,8 @@ export const products = {
       id: 'oranges',
       name: 'Oranges',
       category: 'Fruits',
+      imageSrc: orangesImage,
+      imageAlt: 'Oranges',
       variety: 'Kinnow and table orange selections',
       grade: 'Export and local market grades',
       packaging: 'Net bags or cartons depending on market',
@@ -182,6 +204,8 @@ export const products = {
       id: 'onion',
       name: 'Onion',
       category: 'Vegetables',
+      imageSrc: onionImage,
+      imageAlt: 'Onions',
       variety: 'Red and white onion lots',
       grade: 'Wholesale graded for size and freshness',
       packaging: 'Mesh bags, jute bags, or loose loading',
@@ -191,6 +215,8 @@ export const products = {
       id: 'tomatoes',
       name: 'Tomatoes',
       category: 'Vegetables',
+      imageSrc: tomatoesImage,
+      imageAlt: 'Tomatoes',
       variety: 'Market-fresh table tomatoes',
       grade: 'Graded as per buyer preference',
       packaging: 'Crates or cartons for safe handling',
@@ -200,6 +226,8 @@ export const products = {
       id: 'potato',
       name: 'Potato',
       category: 'Vegetables',
+      imageSrc: potatoesImage,
+      imageAlt: 'Potatoes',
       variety: 'Processing and table varieties',
       grade: 'Selection by size and skin quality',
       packaging: 'Jute or mesh bags with bulk quantities',
@@ -209,6 +237,8 @@ export const products = {
       id: 'ginger',
       name: 'Ginger',
       category: 'Vegetables',
+      imageSrc: gingerImage,
+      imageAlt: 'Ginger',
       variety: 'Local and imported lots (as per demand)',
       grade: 'Cleaned and sorted for trade',
       packaging: 'Bags or cartons for hygienic transport',
@@ -218,6 +248,8 @@ export const products = {
       id: 'garlic',
       name: 'Garlic',
       category: 'Vegetables',
+      imageSrc: garlicImage,
+      imageAlt: 'Garlic',
       variety: 'Local and Chinese garlic availability',
       grade: 'Sorted bulbs with size grading',
       packaging: 'Net bags or cartons',

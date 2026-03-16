@@ -1,8 +1,10 @@
 import { Helmet } from 'react-helmet-async'
 import { leadership, proofSections, seo } from '../data/siteData.js'
-import ceoImage from '../assets/ceo.jpg'
+import ceoImage from '../assets/ceo.jpeg'
 
 function About() {
+  const interviewVideoSrc = `${import.meta.env.BASE_URL}video.mp4`
+
   return (
     <>
       <Helmet>
@@ -85,13 +87,14 @@ function About() {
               Interview Video
             </h3>
             <div className="mt-3 aspect-video w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-900/5">
-              <iframe
-                title="About Us – Interview Video"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                className="h-full w-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
+              <video
+                className="h-full w-full object-cover"
+                controls
+                preload="metadata"
+              >
+                <source src={interviewVideoSrc} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </section>
@@ -126,9 +129,16 @@ function About() {
                 <p className="mt-3 text-xs leading-relaxed text-slate-700">
                   {section.description}
                 </p>
-                <div className="mt-3 flex items-center justify-center rounded-xl border border-dashed border-slate-300 bg-slate-50/60 px-3 py-4 text-[11px] text-slate-500">
-                  {section.imageAlt}
-                </div>
+            {section.imageSrc && (
+              <figure className="mt-3 overflow-hidden rounded-xl border border-slate-200 bg-slate-50/60">
+                <img
+                  src={section.imageSrc}
+                  alt={section.imageAlt}
+                  className="h-40 w-full object-cover"
+                  loading="lazy"
+                />
+              </figure>
+            )}
               </article>
             ))}
           </div>

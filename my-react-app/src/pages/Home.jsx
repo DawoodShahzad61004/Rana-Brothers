@@ -8,10 +8,12 @@ import {
   seo,
 } from '../data/siteData.js'
 import ProductCard from '../components/ProductCard.jsx'
-import ceoImage from '../assets/ceo.jpg'
+import ceoImage from '../assets/ceo.jpeg'
 
 function Home() {
   const navigate = useNavigate()
+
+  const companyVideoSrc = `${import.meta.env.BASE_URL}video.mp4`
 
   const handleExploreProducts = () => {
     const el = document.getElementById('home-products')
@@ -129,13 +131,14 @@ function Home() {
               Company Video
             </h3>
             <div className="mt-3 aspect-video w-full overflow-hidden rounded-2xl border border-slate-200 bg-slate-900/5">
-              <iframe
-                title="Company Video"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                className="h-full w-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
+              <video
+                className="h-full w-full object-cover"
+                controls
+                preload="metadata"
+              >
+                <source src={companyVideoSrc} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
@@ -151,19 +154,9 @@ function Home() {
         >
           Company Motto
         </h2>
-        <p className="mt-2 text-sm text-slate-600">
-          5–6 guiding points that shape how Rana Brothers works with growers, agents, and buyers.
+        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-700">
+          {homeContent.mottos}
         </p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {homeContent.mottos.map((motto) => (
-            <span
-              key={motto}
-              className="inline-flex items-center rounded-full border border-emerald-100 bg-emerald-50/60 px-3 py-1 text-xs font-medium text-emerald-900"
-            >
-              {motto}
-            </span>
-          ))}
-        </div>
       </section>
 
       <section
@@ -262,6 +255,36 @@ function Home() {
               </figcaption>
             </figure>
           ))}
+        </div>
+      </section>
+
+      <section
+        aria-labelledby="home-location-heading"
+        className="mx-auto max-w-6xl px-4 pb-10 md:px-6 lg:px-8"
+      >
+        <div className="grid gap-6 md:grid-cols-[minmax(0,1.4fr),minmax(0,1.8fr)] md:items-start">
+          <div>
+            <h2
+              id="home-location-heading"
+              className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500"
+            >
+              Location
+            </h2>
+            <p className="mt-2 text-sm text-slate-700">
+              Rana Brothers operates from Sabzi Mandi Badami Bagh, Ravi Link Road, Lahore. Use the
+              map to confirm the exact market location and plan your visit or logistics.
+            </p>
+          </div>
+          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100">
+            <iframe
+              title="Rana Brothers location on Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27225.754514221108!2d74.299!3d31.592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903a3f8f2c8d7%3A0x7b3a1a5ddfba5c2b!2sSabzi%20Mandi%20Badami%20Bagh!5e0!3m2!1sen!2sPK!4v1700000000000"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="h-72 w-full border-0"
+              allowFullScreen
+            />
+          </div>
         </div>
       </section>
 

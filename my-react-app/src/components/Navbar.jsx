@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { branding, navigation } from '../data/siteData.js'
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.jpeg'
 
 const activeClass = 'text-brand-primary'
 

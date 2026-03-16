@@ -3,6 +3,14 @@ import { useNavigate } from 'react-router-dom'
 function ProductCard({ product }) {
   const navigate = useNavigate()
 
+  const fallbackImage =
+    'data:image/svg+xml;charset=utf-8,' +
+    encodeURIComponent(
+      `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ecfdf5"/><stop offset="0.5" stop-color="#ffffff"/><stop offset="1" stop-color="#fffbeb"/></linearGradient></defs><rect width="100%" height="100%" fill="url(#g)"/><text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" fill="#64748b" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto" font-size="34">${String(
+        product?.name ?? 'Product'
+      )} image</text></svg>`
+    )
+
   const handleQuote = () => {
     navigate('/contact', { state: { productName: product.name } })
   }
@@ -16,8 +24,17 @@ function ProductCard({ product }) {
             {product.category}
           </span>
         </div>
-        <div className="mb-3 aspect-video w-full rounded-xl bg-gradient-to-br from-emerald-50 via-white to-amber-50 text-[11px] text-slate-400 ring-1 ring-emerald-50 flex items-center justify-center">
-          <span>{product.name} image placeholder</span>
+        <div className="mb-3 aspect-video w-full overflow-hidden rounded-xl bg-gradient-to-br from-emerald-50 via-white to-amber-50 ring-1 ring-emerald-50">
+          <img
+            src={product.imageSrc || fallbackImage}
+            alt={product.imageAlt || `${product.name} image`}
+            loading="lazy"
+            className="h-full w-full object-cover"
+            onError={(e) => {
+              e.currentTarget.onerror = null
+              e.currentTarget.src = fallbackImage
+            }}
+          />
         </div>
         <dl className="space-y-1.5 text-xs text-slate-600">
           {product.variety && (
