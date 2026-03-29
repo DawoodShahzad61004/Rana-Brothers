@@ -5,13 +5,16 @@ import { HelmetProvider } from 'react-helmet-async'
 import './index.css'
 import './styles/layout.css'
 import App from './App.jsx'
+import { LanguageProvider } from './context/LanguageContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>
-      <BrowserRouter basename="/Rana-Brothers">
-        <App />
-      </BrowserRouter>
+      <LanguageProvider>
+        <BrowserRouter basename="/Rana-Brothers">
+          <App />
+        </BrowserRouter>
+      </LanguageProvider>
     </HelmetProvider>
   </StrictMode>,
 )

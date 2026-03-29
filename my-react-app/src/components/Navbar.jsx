@@ -2,12 +2,15 @@ import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { branding, navigation } from '../data/siteData.js'
 import logo from '../assets/logo.jpeg'
+import { useLanguage } from '../context/LanguageContext.jsx'
+import { translateText } from '../i18n/languageUtils.js'
 
 const activeClass = 'text-brand-primary'
 
 function Navbar({ onGetStarted }) {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [productsOpen, setProductsOpen] = useState(false)
+  const { language, toggleLanguage } = useLanguage()
 
   const brandName = branding.useAlternate ? branding.alternateName : branding.primaryName
 
@@ -24,10 +27,10 @@ function Navbar({ onGetStarted }) {
           />
           <div className="flex flex-col">
             <span className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
-              {brandName}
+              {translateText(brandName, language)}
             </span>
             <span className="text-xs text-slate-500">
-              {branding.yearsOfExcellence}+ years of excellence
+              {branding.yearsOfExcellence}+ {translateText('years of excellence', language)}
             </span>
           </div>
         </Link>
@@ -36,9 +39,9 @@ function Navbar({ onGetStarted }) {
           type="button"
           onClick={toggleMobile}
           className="inline-flex items-center justify-center rounded-md border border-slate-300 px-2 py-1 text-slate-700 hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-primary md:hidden"
-          aria-label="Toggle navigation menu"
+          aria-label={translateText('Toggle navigation menu', language)}
         >
-          <span className="sr-only">Toggle navigation</span>
+          <span className="sr-only">{translateText('Toggle navigation', language)}</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
@@ -125,10 +128,18 @@ function Navbar({ onGetStarted }) {
           </ul>
           <button
             type="button"
+            onClick={toggleLanguage}
+            className="rounded-full border border-emerald-200 bg-white px-3 py-2 text-xs font-semibold text-emerald-700 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+            aria-label={language === 'en' ? 'Switch to Urdu' : 'Switch to English'}
+          >
+            {language === 'en' ? 'اردو' : 'English'}
+          </button>
+          <button
+            type="button"
             onClick={onGetStarted}
             className="rounded-full bg-emerald-700 px-4 py-2 text-sm font-semibold text-white shadow-soft hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
           >
-            Get Started
+            {translateText('Get Started', language)}
           </button>
         </div>
       </nav>
@@ -178,13 +189,20 @@ function Navbar({ onGetStarted }) {
             )}
             <button
               type="button"
+              onClick={toggleLanguage}
+              className="mt-2 w-full rounded-full border border-emerald-200 bg-white px-4 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+            >
+              {language === 'en' ? 'اردو' : 'English'}
+            </button>
+            <button
+              type="button"
               onClick={() => {
                 setMobileOpen(false)
                 onGetStarted()
               }}
               className="mt-2 w-full rounded-full bg-emerald-700 px-4 py-2 text-sm font-semibold text-white shadow-soft hover:bg-emerald-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
             >
-              Get Started
+              {translateText('Get Started', language)}
             </button>
           </div>
         </div>
