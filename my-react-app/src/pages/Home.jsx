@@ -370,7 +370,12 @@ function Home() {
                   <div className="absolute -inset-2 rounded-full border-2 border-dashed border-emerald-300 animate-spin"
                     style={{ animationDuration: '12s' }} />
                   <div className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-white shadow-xl">
-                    <img src={ceoImage} alt="CEO – Rana Imran" className="h-full w-full object-cover" />
+                    <img 
+                      src={ceoImage} 
+                      alt="CEO – Rana Imran" 
+                      className="h-full w-full object-cover" 
+                      style={{ objectPosition: 'center 30%' }}
+                    />
                   </div>
                 </div>
                 <figcaption className="mt-4 text-center">

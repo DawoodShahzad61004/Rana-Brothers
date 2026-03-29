@@ -345,7 +345,7 @@ function About() {
                       src={ceoImage}
                       alt="CEO – Rana Imran"
                       className="h-full w-full object-cover"
-                      style={{ objectPosition: 'center 35%' }}
+                      style={{ objectPosition: 'center 30%' }}
                     />
                   </div>
                   {/* Badge */}
