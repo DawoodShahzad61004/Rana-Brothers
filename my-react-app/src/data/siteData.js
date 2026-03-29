@@ -41,7 +41,7 @@ export const navigation = {
 export const contactInfo = {
   phone: '03018424686',
   ptcl: '04237701368',
-  address: 'Shop# 23 Sabzi Mandi Badami Bagh, Ravi Link Road, Lahore',
+  address: 'Shop# 23 Sabzi Mandi Badami Bagh, Ravi Link Road, Lahore, Pakistan',
   email: 'ranabrothers323@gmail.com',
   whatsappNumberInternational: '+923018424686',
 }
