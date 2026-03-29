@@ -337,14 +337,15 @@ function About() {
                     style={{ animationDuration: '2.5s' }}
                   />
                   <div
-                    className="absolute -inset-3 rounded-full border-2 border-dashed border-emerald-300"
+                    className="absolute -inset-4 rounded-full border-2 border-dashed border-emerald-300"
                     style={{ animation: 'spin 14s linear infinite' }}
                   />
-                  <div className="relative h-44 w-44 overflow-hidden rounded-full border-4 border-white shadow-2xl ring-4 ring-emerald-100">
+                  <div className="relative h-48 w-48 overflow-hidden rounded-full border-4 border-white shadow-2xl ring-4 ring-emerald-100">
                     <img
                       src={ceoImage}
                       alt="CEO – Rana Imran"
                       className="h-full w-full object-cover"
+                      style={{ objectPosition: 'center 35%' }}
                     />
                   </div>
                   {/* Badge */}
