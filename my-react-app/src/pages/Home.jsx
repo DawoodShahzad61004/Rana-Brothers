@@ -539,7 +539,7 @@ function Home() {
             <div className="overflow-hidden rounded-2xl border border-slate-200 shadow-lg">
               <iframe
                 title="Rana Brothers location on Google Maps"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27225.754514221108!2d74.299!3d31.592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903a3f8f2c8d7%3A0x7b3a1a5ddfba5c2b!2sSabzi%20Mandi%20Badami%20Bagh!5e0!3m2!1sen!2sPK!4v1700000000000"
+                src="https://www.google.com/maps?q=31.600778,74.308250&hl=en&z=15&output=embed"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="h-72 w-full border-0"
