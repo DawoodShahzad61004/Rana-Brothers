@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async'
 import { useEffect, useRef, useState } from 'react'
 import { leadership, proofSections, seo } from '../data/siteData.js'
 import ceoImage from '../assets/ceo.jpeg'
+import businessCardImage from '../assets/businessCard.png'
 
 /* ─── Scroll-reveal hook ─── */
 function useScrollReveal(options = {}) {
@@ -423,7 +424,7 @@ function About() {
                   {[
                     { year: '2000s', text: 'Founded operations at Sabzi Mandi Badami Bagh, Lahore.' },
                     { year: '2010s', text: 'Expanded to export coordination for Middle East & international buyers.' },
-                    { year: '2020s', text: 'Appointed to Price Control Council & General Secretary of Anjaman Aahrtiaan.' },
+                    { year: '2020s', text: 'Appointed to Member of Price Control Council & General Secretary of Anjaman Aahrtiaan.' },
                   ].map((item, i) => (
                     <Reveal key={i} delay={i * 120} direction="left">
                       <div className="relative">
@@ -475,12 +476,20 @@ function About() {
                       <span className="text-slate-600 text-xs">Sabzi Mandi Badami Bagh, Lahore</span>
                     </div>
                   </div>
+
+                  <a
+                    href={businessCardImage}
+                    download="rana-brothers-business-card.png"
+                    className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-emerald-700 px-4 py-2.5 text-xs font-bold uppercase tracking-wide text-white shadow-sm hover:bg-emerald-800 transition-colors"
+                  >
+                    ⬇ Download Business Card
+                  </a>
                 </div>
               </Reveal>
             </div>
           </div>
         </section>
-
+                  
         {/* ── TITLES & PROOF OF ROLES ── */}
         <section
           aria-labelledby="about-proofs-heading"
