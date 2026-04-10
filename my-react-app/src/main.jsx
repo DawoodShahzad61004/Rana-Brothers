@@ -11,7 +11,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>
       <LanguageProvider>
-        <BrowserRouter basename="/Rana-Brothers">
+        <BrowserRouter basename="/">
           <App />
         </BrowserRouter>
       </LanguageProvider>
