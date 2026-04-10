@@ -445,9 +445,9 @@ function Contact() {
                   </p>
                   <div className="space-y-3">
                     {[
-                      { icon: '📞', label: 'Rana Imran',    value: contactInfo.phone,    href: `tel:${contactInfo.phone}` },
+                      { icon: '📞', label: 'Rana Imran (CEO)',    value: contactInfo.phone,    href: `tel:${contactInfo.phone}` },
                       { icon: '📞', label: 'Azmat Hussain', value: '03003304300',         href: 'tel:03003304300' },
-                      { icon: '☎️', label: 'PTCL',          value: contactInfo.ptcl,     href: `tel:${contactInfo.ptcl}` },
+                      { icon: '☎️', label: 'Office',          value: contactInfo.ptcl,     href: `tel:${contactInfo.ptcl}` },
                     ].map((item, i) => (
                       <ContactRow key={i} icon={item.icon} label={item.label} value={item.value} href={item.href} isLink />
                     ))}

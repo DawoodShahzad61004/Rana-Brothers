@@ -23,7 +23,7 @@ function Navbar({ onGetStarted }) {
           <img
             src={logo}
             alt="Rana Brothers logo"
-            className="h-10 w-10 rounded-full border border-emerald-100 object-cover"
+            className="h-12 w-12 rounded-full border border-emerald-100 object-cover"
           />
           <div className="flex flex-col">
             <span className="text-sm font-semibold uppercase tracking-wide text-emerald-700">
@@ -126,14 +126,14 @@ function Navbar({ onGetStarted }) {
               ),
             )}
           </ul>
-          <button
+          {/* <button
             type="button"
             onClick={toggleLanguage}
             className="rounded-full border border-emerald-200 bg-white px-3 py-2 text-xs font-semibold text-emerald-700 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
             aria-label={language === 'en' ? 'Switch to Urdu' : 'Switch to English'}
           >
             {language === 'en' ? 'اردو' : 'English'}
-          </button>
+          </button> */}
           <button
             type="button"
             onClick={onGetStarted}
@@ -187,13 +187,13 @@ function Navbar({ onGetStarted }) {
                 </NavLink>
               ),
             )}
-            <button
+            {/* <button
               type="button"
               onClick={toggleLanguage}
               className="mt-2 w-full rounded-full border border-emerald-200 bg-white px-4 py-2 text-sm font-semibold text-emerald-700 hover:bg-emerald-50 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
             >
               {language === 'en' ? 'اردو' : 'English'}
-            </button>
+            </button> */}
             <button
               type="button"
               onClick={() => {

@@ -380,7 +380,7 @@ function Home() {
                 </div>
                 <figcaption className="mt-4 text-center">
                   <p className="font-bold text-slate-900">Rana Imran</p>
-                  <p className="text-xs text-emerald-700 font-medium">Chief Executive Officer</p>
+                  <p className="text-xs text-emerald-700 font-medium">Chief Executive</p>
                 </figcaption>
               </figure>
             </Reveal>

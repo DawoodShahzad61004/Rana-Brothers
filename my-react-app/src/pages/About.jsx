@@ -354,7 +354,7 @@ function About() {
                   </div>
                 </div>
                 <p className="mt-6 text-base font-bold text-slate-900">Rana Imran</p>
-                <p className="text-xs text-emerald-700 font-medium">Chief Executive Officer</p>
+                <p className="text-xs text-emerald-700 font-medium">Chief Executive</p>
                 <p className="mt-2 text-[11px] text-slate-500 text-center max-w-[220px]">
                   Leading worldwide export of all kinds of fruits & vegetables.
                 </p>
